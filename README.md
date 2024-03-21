@@ -18,5 +18,5 @@ This solution includes:
 ## Assumptions:
 Some assumptions made by this solutions are:
 - The user will use the correct decimal separator, the dot (.)
-- The user won't close the application in a working day, or the ID be restored back to 0001 and overwrite other transactions.
-- The user won't modify the inventory.txt file while the application is running, or the GUI will not read the new changes.
+- The user won't close the application in a working day, otherwise the ID be restored back to 0001 and overwrite other transactions.
+- The user won't modify the inventory.txt file while the application is running, otherwise the GUI will not read the new changes.
