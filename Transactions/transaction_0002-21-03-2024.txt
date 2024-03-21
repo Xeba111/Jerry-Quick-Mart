@@ -1,0 +1,11 @@
+March 21, 2024
+TRANSACTION: 0002
+Item                    Quantity                    Unitary                    Total
+Milk                    1                           $3.75                       $3.75
+************************************
+TOTAL NUMBER OF ITEMS SOLD: 1
+SUB-TOTAL: $3.75
+TAX (6.5%): $0.24
+TOTAL: $3.99
+CASH: $20.00
+CHANGE: $16.01
