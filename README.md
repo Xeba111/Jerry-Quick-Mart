@@ -2,7 +2,7 @@
 
 ## Instructions
 - Clone the repository to any directory.
-- Install requirements by using any Python 3.12 environment and running the command.
+- Install requirements by using any Python 3.12 environment that has pip, and running the command.
   - pip install -r requirements.txt
 - Run the program with the same environment that has the necessary libraries installed.
 
