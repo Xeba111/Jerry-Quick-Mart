@@ -2,7 +2,7 @@ from inventory import Inventory
 from product import Product
 
 """
-    This class defines CartItem, a class that stores Products and its quantity. 
+    This class defines CartItem, a class that stores a product and its quantity. 
     Its attributes are:
         - Product element
         - Quantity of the Product

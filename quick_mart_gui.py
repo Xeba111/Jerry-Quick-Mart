@@ -279,6 +279,7 @@ class QuickMartApp(QMainWindow):
         """Confirms cash value entered in the text field"""
         if self.cash_input.text() != "" and float(self.cash_input.text()) != 0.0:
             self.cash = float(self.cash_input.text())
+            return QMessageBox.information(self, "Action Successful", "The money provided by the user has been confirmed!")
         else:
             return QMessageBox.information(self, "Action Failed", "Please enter a valid value")
 

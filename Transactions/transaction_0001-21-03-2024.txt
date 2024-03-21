@@ -1,12 +1,11 @@
 March 21, 2024
 TRANSACTION: 0001
 Item                    Quantity                    Unitary                    Total
-Red Bull                2                           $4.30                        $8.60
-Oreos                   1                           $1.50                        $1.50
+Milk                    2                           $3.75                       $7.50
 ************************************
-TOTAL NUMBER OF ITEMS SOLD: 3
-SUB-TOTAL: $10.10
-TAX (6.5%): $0.10
-TOTAL: $10.20
-CASH: $50.00
-CHANGE: $39.80
+TOTAL NUMBER OF ITEMS SOLD: 2
+SUB-TOTAL: $7.50
+TAX (6.5%): $0.49
+TOTAL: $7.99
+CASH: $10.00
+CHANGE: $2.01
