@@ -239,18 +239,21 @@ class QuickMartApp(QMainWindow):
 
     def finalize_transaction(self):
         """Finalizes the transaction using the Transaction class"""
-
         self.transaction_id_counter += 1
         transaction_id = f"{self.transaction_id_counter:04d}"
 
         transaction = Transaction(
             self.inventory, self.cart, self.is_member, transaction_id)
+
+        if self.cash < transaction.total:
+            return QMessageBox.information(self, "Action Failed", "The money provided by the user is not enough to finish the transaction")
+
         receipt = transaction.finalize(self.cash)
         QMessageBox.information(
             self, "Transaction Successful", "The transaction has been aproved!")
         self.inventory.save_inventory(self.inventory_file)
         self.cart.empty_cart()
-        self.reset_value
+        self.reset_value()
         self.populate_cart_table()
         self.populate_inventory_table()
 
@@ -263,6 +266,7 @@ class QuickMartApp(QMainWindow):
 
         transaction = Transaction(
             self.inventory, self.cart, self.is_member, transaction_id)
+
         receipt_preview = transaction.generate_receipt(self.cash)
 
         msgBox = QMessageBox()
@@ -285,7 +289,6 @@ class QuickMartApp(QMainWindow):
 
     def confirm_action(self):
         """Confirms the finalization of the transaction"""
-
         if not self.cart.items:
             return QMessageBox.information(self, "Transaction Failed", "The transaction has failed, the cart is currently empty")
 

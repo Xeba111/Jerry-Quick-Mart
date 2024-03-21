@@ -1,3 +1,6 @@
-Milk: 7, $3.75, $3.50, Taxable
-Red Bull: 7, $4.30, $4.00, Tax-Exempt
-Flour: 7, $3.10, $2.75, Taxable
+Milk: 12, $3.75, $3.50, Taxable
+Red Bull: 4, $4.30, $4.00, Tax-Exempt
+Flour: 2, $3.10, $2.75, Taxable
+Oreos: 8, $1.50, $1.25, Taxable
+Mints: 85, $0.80, $0.65, Taxable
+Doritos: 2, $1.20, $1.05, Taxable

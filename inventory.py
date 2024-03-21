@@ -17,20 +17,28 @@ class Inventory:
         self.load_inventory(inventory_file)
 
     # ***** FUNCTIONS ***** #
+
     def load_inventory(self, inventory_file):
         """Load products from a given inventory file."""
+        self.products = {}  # Assuming you have this dictionary to store products
         with open(inventory_file, 'r') as file:
+            line_number = 0
             for line in file:
-                parts = line.strip().split(':')
-                name = parts[0].strip()
-                details = parts[1].split(',')
-                quantity = int(details[0].strip())
-                regular_price = float(details[1].strip().replace('$', ''))
-                member_price = float(details[2].strip().replace('$', ''))
-                tax_status = details[3].strip()
+                line_number += 1
+                try:
+                    parts = line.strip().split(':')
+                    name = parts[0].strip()
+                    details = parts[1].split(',')
+                    quantity = int(details[0].strip())
+                    regular_price = float(details[1].strip().replace('$', ''))
+                    member_price = float(details[2].strip().replace('$', ''))
+                    tax_status = details[3].strip()
 
-                self.products[name] = Product(
-                    name, quantity, regular_price, member_price, tax_status)
+                    self.products[name] = Product(
+                        name, quantity, regular_price, member_price, tax_status)
+                except IndexError:
+                    print(f"Error processing line {line_number}: '{
+                        line.strip()}' - possibly malformed data.")
 
     def update_quantity(self, product_name, quantity):
         """Update the quantity of a product."""

@@ -50,7 +50,7 @@ class Transaction:
     def generate_receipt(self, cash):
         """Generate a formatted receipt for the transaction."""
         if cash == 0.0:
-            self.set_cash_received(100.00)
+            self.set_cash_received(0.0)
         else:
             self.set_cash_received(cash)
         spacing = 20
@@ -58,7 +58,6 @@ class Transaction:
         item_length = len("Item")
         quantity_length = len("Quantity")
         unit_price_length = len("Unitary")
-        total_length = len("Total")
         items_sold = sum(item.quantity for item in self.cart.items.values())
         receipt_lines = [
             self.date.strftime("%B %d, %Y"),
@@ -116,6 +115,7 @@ class Transaction:
 
     def finalize(self, cash):
         """Finalize the transaction: update inventory, generate and save the receipt, and clear the cart."""
+
         for item in self.cart.items.values():
             self.inventory.products[item.product.name].quantity -= item.quantity
 
